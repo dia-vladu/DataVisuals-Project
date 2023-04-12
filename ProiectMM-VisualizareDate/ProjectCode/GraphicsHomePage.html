@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Graphics Home Page</title>
+    <link rel="stylesheet" href="./css/GraphicsHomePage.css">
+    <link rel="icons" href="bootstrap">
+    <script src="https://kit.fontawesome.com/2729eaf320.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="row">
+                <div class="col">
+                    <div class="logo-text">
+                        <span>Data</span>
+                        Visuals
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-chart-simple"></i>Graphics</a></li>
+                    <li><a href="BubbleChartPage.html"><i class="fa-solid fa-circle"></i>Bubble Chart</a></li>
+                    <li><a href="TablePage.html"><i class="fa-solid fa-table"></i>Table</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <h2>Graphics</h2>
+                    <div class="btn-container">
+                        <label class="switch btn-color-mode-switch">
+                            <input type="checkbox" name="color_mode" id="color_mode" value="1">
+                            <label for="color_mode" data-on="BarChart" data-off="LineChart"
+                                class="btn-color-mode-switch-inner"></label>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-content">
+                    <div class="card" onClick="window.location='BarChartPage.html'">
+                        <div class="title">BAR CHART</div>
+                        <div class="chart">
+                            <svg></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-content">
+                    <div class="card" onClick="window.location='LineChartPage.html'">
+                        <div class="title">LINE CHART</div>
+                        <div class="chart">
+                            <svg></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let ul = document.querySelector('ul');
+        let li = document.querySelectorAll('li');
+
+        li.forEach(el => {
+            el.addEventListener('click', function () {
+                ul.querySelector('.active').classList.remove('active');
+                el.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

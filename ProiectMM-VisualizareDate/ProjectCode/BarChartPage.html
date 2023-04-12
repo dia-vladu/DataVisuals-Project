@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bar Chart Page</title>
+    <link rel="stylesheet" href="./css/GraphicsHomePage.css">
+    <link rel="stylesheet" href="./css/BarChartPage.css">
+    <link rel="icons" href="bootstrap">
+    <script src="https://kit.fontawesome.com/2729eaf320.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./javascript/BarChart.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="row">
+                <div class="col">
+                    <div class="logo-text">
+                        <span>Data</span>
+                        Visuals
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-chart-simple"></i>Bar Chart</a></li>
+                    <li><a href="LineChartPage.html"><i class="fa-solid fa-chart-simple"></i>Line Chart</a></li>
+                    <li><a href="BubbleChartPage.html"><i class="fa-solid fa-circle"></i>Bubble Chart</a></li>
+                    <li><a href="TablePage.html"><i class="fa-solid fa-table"></i>Table</a></li>
+                </ul>
+            </nav>
+            <!-- <div class="button">
+                <a href="GraphicsHomePage.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div> -->
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <h2>Bar Chart</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-content">
+                    <div class="card">
+                        <div class="title" id="tara_indicator">BAR CHART</div>
+                        <div class="chart">
+                            <svg id="svg" width="950" height="350"></svg>
+                            <br>
+                            <select id="select">
+                                <option value="BE">BE</option>
+                                <option value="BG">BG</option>
+                                <option value="CZ">CZ</option>
+                                <option value="DK">DK</option>
+                                <option value="DE">DE</option>
+                                <option value="EE">EE</option>
+                                <option value="IE">IE</option>
+                                <option value="EL">EL</option>
+                                <option value="ES">ES</option>
+                                <option value="FR">FR</option>
+                                <option value="HR">HR</option>
+                                <option value="IT">IT</option>
+                                <option value="CY">CY</option>
+                                <option value="LV">LV</option>
+                                <option value="LT">LT</option>
+                                <option value="LU">LU</option>
+                                <option value="HU">HU</option>
+                                <option value="MT">MT</option>
+                                <option value="NL">NL</option>
+                                <option value="AT">AT</option>
+                                <option value="PL">PL</option>
+                                <option value="PT">PT</option>
+                                <option value="RO" selected>RO</option>
+                                <option value="SI">SI</option>
+                                <option value="SK">SK</option>
+                                <option value="FI">FI</option>
+                                <option value="SE">SE</option>
+                            </select>
+
+                            <input type="radio" name="optiune" id="PIB" value="PIB" checked>
+                            <label for="PIB" id="PIB">PIB</label>
+
+                            <input type="radio" name="optiune" id="SV" value="SV">
+                            <label for="SV" id="SV">Speranta de viata</label>
+
+                            <input type="radio" name="optiune" id="POP" value="POP">
+                            <label for="POP" id="POP">Populatie</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let ul = document.querySelector('ul');
+        let li = document.querySelectorAll('li');
+
+        li.forEach(el => {
+            el.addEventListener('click', function () {
+                ul.querySelector('.active').classList.remove('active');
+                el.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

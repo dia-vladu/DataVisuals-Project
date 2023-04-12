@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Bubble Chart Page</title>
+    <link rel="stylesheet" href="./css/GraphicsHomePage.css">
+    <link rel="stylesheet" href="./css/BubbleChartPage.css">
+    <link rel="icons" href="bootstrap">
+    <script src="https://kit.fontawesome.com/2729eaf320.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./javascript/BubbleChart.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="row">
+                <div class="col">
+                    <div class="logo-text">
+                        <span>Data</span>
+                        Visuals
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="BarChartPage.html"><i class="fa-solid fa-chart-simple"></i>Bar Chart</a></li>
+                    <li><a href="LineChartPage.html"><i class="fa-solid fa-chart-simple"></i>Line Chart</a></li>
+                    <li class="active"><a href="#"><i class="fa-solid fa-circle"></i>Bubble Chart</a></li>
+                    <li><a href="TablePage.html"><i class="fa-solid fa-table"></i>Table</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="row">
+                <div class="col">
+                    <h2>Bubble Chart</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-content">
+                    <div class="card">
+                        <div class="title">BUBBLE CHART</div>
+                        <div class="chart">
+                            <div>
+                                <canvas id="canvas_graph" width="950" height="350"></canvas>
+                                <br>
+                                <select id="select">
+                                    <option value="2006" selected>2006</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2000">2019</option>
+                                    <option value="2001">2020</option>
+                                </select>
+                                <button type="button" id="animatie">Show Evolution</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        let ul = document.querySelector('ul');
+        let li = document.querySelectorAll('li');
+
+        li.forEach(el => {
+            el.addEventListener('click', function () {
+                ul.querySelector('.active').classList.remove('active');
+                el.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

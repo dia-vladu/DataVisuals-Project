@@ -1,0 +1,28 @@
+table{
+    margin: 10px 100px 10px 0px;
+}
+
+th {
+    font-weight: bold;
+    background-color: #E0E0E0;
+    height: 20px;
+    padding: 8px 12px;
+}
+
+td {
+    width: 25%;
+    /* border: 2px solid white; */
+    border-radius: 5px;
+    text-align: center;
+    padding: 4px 5px;
+    background: transparent;
+}
+
+div.table {
+    display: grid;
+    grid-template-columns: 4fr;
+    column-gap: 0.5em;
+    /* background: #191c51; */
+    /* background-image: linear-gradient(to bottom left, #21648a, #1f5881, #172d5b, #191c51); */
+    color: white;
+}
